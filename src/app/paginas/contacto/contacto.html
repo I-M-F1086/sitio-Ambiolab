@@ -1,0 +1,25 @@
+<div class="contacto-box">
+    <h2>Contacto</h2>
+    <p>Encianos un mensaje y te responderemos pronto</p>
+
+    <!--(submit) reemplaza al addEventListener('submit') de JS -->
+    <form (ngSubmit)="enviarFormulario($event)">
+        <!--Vinculamos el input con la variable de TypeSript-->
+    <input type="text" placeholder="" name="nombre"
+    [(ngModel)]="nombreUsuario"
+    required>
+    <button type="submit">enviar mensaje </button>    
+    </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<p>contacto works!</p>
