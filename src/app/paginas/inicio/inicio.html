@@ -1,1 +1,69 @@
-<p>inicio works!</p>
+<div class="hero-section">
+   <!--seccion HERO que es la presentacion principal-->
+   <section class="hero-section">
+    <span class="badge">Angular 20 SPA</span>
+    <h1>Bienvenido a nuestra plataforma <span class="texto-azul">dinamica</span></h1>
+    <p class="descripcion">
+        creamos soluciones ambientales rapidas y seguras y con un rendimiento excepcional,
+        Navega en nuestro sitio y conocemas acerca de este equipo que hemos formado para brindar calidad 
+        y servicio a cada cliente que decide confiar en nosotros.
+    </p>
+
+    <!--Botones de accion-->
+    <div class="acciones">
+        <a routerLink="/contacto" class="btn-principal">¡contactanos!</a>
+        <a routerLink="/nosotros" class="btn-secundario">Saber más</a>
+    </div>
+   </section>
+  
+   <!--seccion caracteristicas breves-->
+   <section class="caracteristicas">
+    <div class="bloque-features">
+        <div class="icono verde"> </div>
+        <h3>Velocidad SPA</h3>
+        <p>Navegacion instantánea entre paginas sin recargar el navegador </p>
+    </div>
+
+    <div class="bloque-features">
+        <div class="icono azul"></div>
+        <h3>componentes mmodernos</h3>
+        <p>Estructura modular optimizada basado en arquitectura standalone</p>
+    </div>
+    </section>
+
+    <!--seccion servicios-->
+    <section class="servicios-seccion">
+        <h2>Nuestros Servicios Destacados</h2>
+        <p class="servicios-subtitulos">Soluciones a tu medida potencidas </p>
+
+
+         <div class="servicio-grid">
+            <!--tarjeta1: Azul-->
+            <div class="tarjeta-servicio borde-azul">
+                <div class="servicio-icono-top azul"></div>
+                <h3>Desarrollo web</h3>
+                <p>Diseño y creacion de SPAS de alto rendimiento adaptadas</p>
+                <a routerLink="/contacto" class="btn-servicio-link texto-azul">Solicitar info</a>
+            </div>
+
+            <!--Tarjeta 2: verde-->
+            <div class="tarjeta-servicio borde-verde">
+                <div></div>
+            <h3>Optimizacion de SEO</h3>
+            <p>mejoramos el posicionamiento y velocidad de tu web</p>
+            <a routerLink="/nosotros" class="btn-servicio-link text-verde">Saber mas -></a>
+            </div>
+
+            <!--tarjeta 3 Naranja-->
+            <div class="tarjeta-servicio borde-naranja">
+              <div class="servicio-icono-top naranja"></div>
+                <h3>Diseño web iu/ix</h3>
+                <p>Estructuramos interfaces modernas e intuitivas </p>
+                <a routerLink="/contacto" class="btn-servicio-link text naranja">Ver ejemplo</a>
+            </div>
+         </div>
+    </section>
+
+</div>
+
+<router-outlet

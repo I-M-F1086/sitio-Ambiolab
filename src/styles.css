@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+/*configuraciones genrales para todo el sitio */
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#f4f7f6;
+    color: #333;
+}
+/*estilos de la barra de navegacion*/
+
+.menu-navegacion{
+    background-color: #1e4aaf;
+    padding: 1.2rem 2rem;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.menu-navegacion a{
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/*efecto al pasar el mouse encima*/
+.menu-navegacion a:hover{
+    color:#f97316;
+}
+.activo{
+    color: #f97316;
+    border-bottom: 2px solid #f97316;
+    padding-bottom: 4px;
+}
+/*contenedor dinamico donde se cargan las paginas*/
+.contenedor-principal{
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
