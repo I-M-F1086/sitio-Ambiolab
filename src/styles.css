@@ -9,14 +9,20 @@ body{
 /*estilos de la barra de navegacion*/
 
 .menu-navegacion{
-    background-color: #1e4aaf;
+    position: absolute;
     padding: 1.2rem 2rem;
     display: flex;
     gap: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    width: 600px;
+
+    
 }
 .menu-navegacion a{
-    color: #94a3b8;
+    color: #262729;
+    position: relative ;
+    left: 50px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
@@ -34,7 +40,7 @@ body{
 }
 /*contenedor dinamico donde se cargan las paginas*/
 .contenedor-principal{
-    max-width: 1200px;
-    margin: 3rem auto;
+ 
+    margin: 0;
     padding: 0 1.5rem;
 }

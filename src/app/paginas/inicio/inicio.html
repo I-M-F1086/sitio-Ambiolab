@@ -1,4 +1,4 @@
-<div class="hero-section">
+
    <!--seccion HERO que es la presentacion principal-->
    <section class="hero-section">
     <span class="badge">Angular 20 SPA</span>
@@ -30,40 +30,18 @@
         <p>Estructura modular optimizada basado en arquitectura standalone</p>
     </div>
     </section>
+<app-servicios></app-servicios>
+<app-nosotros></app-nosotros>
+<app-contacto></app-contacto>
 
-    <!--seccion servicios-->
-    <section class="servicios-seccion">
-        <h2>Nuestros Servicios Destacados</h2>
-        <p class="servicios-subtitulos">Soluciones a tu medida potencidas </p>
+<footer class="final-page">
+    <div class="pie-page">
+        <a routerLinkActive="">Aviso de Privacidad</a>
+        <a routerLinkActive="">Politicas</a>
+        <a routerLinkActive="">Redes Sociales</a>
+        <a>Todos los derechos reservados Ivan Martinez</a>
+    </div>
 
 
-         <div class="servicio-grid">
-            <!--tarjeta1: Azul-->
-            <div class="tarjeta-servicio borde-azul">
-                <div class="servicio-icono-top azul"></div>
-                <h3>Desarrollo web</h3>
-                <p>Diseño y creacion de SPAS de alto rendimiento adaptadas</p>
-                <a routerLink="/contacto" class="btn-servicio-link texto-azul">Solicitar info</a>
-            </div>
+</footer>
 
-            <!--Tarjeta 2: verde-->
-            <div class="tarjeta-servicio borde-verde">
-                <div></div>
-            <h3>Optimizacion de SEO</h3>
-            <p>mejoramos el posicionamiento y velocidad de tu web</p>
-            <a routerLink="/nosotros" class="btn-servicio-link text-verde">Saber mas -></a>
-            </div>
-
-            <!--tarjeta 3 Naranja-->
-            <div class="tarjeta-servicio borde-naranja">
-              <div class="servicio-icono-top naranja"></div>
-                <h3>Diseño web iu/ix</h3>
-                <p>Estructuramos interfaces modernas e intuitivas </p>
-                <a routerLink="/contacto" class="btn-servicio-link text naranja">Ver ejemplo</a>
-            </div>
-         </div>
-    </section>
-
-</div>
-
-<router-outlet

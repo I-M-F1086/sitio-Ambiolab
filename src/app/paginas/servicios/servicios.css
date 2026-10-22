@@ -1,0 +1,43 @@
+/* --- SERVICIOS GRID --- */
+.servicios-seccion { margin-top: 5rem; margin-bottom: 4rem; }
+.servicios-seccion h2 { font-size: 2.2rem; color: #0f172a; margin-bottom: 0.5rem; }
+.servicios-subtitulo { color: #64748b; font-size: 1.1rem; margin-bottom: 3rem; }
+.servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+.tarjeta-servicio {
+  background-color: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 5px solid transparent;
+}
+.tarjeta-servicio:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+.tarjeta-servicio.borde-azul { border-top-color: #2563eb; }
+.tarjeta-servicio.borde-verde { border-top-color: #10b981; }
+.tarjeta-servicio.borde-naranja { border-top-color: #f97316; }
+
+.servicio-icono-top {
+  font-size: 1.5rem; width: 45px; height: 45px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px; margin-bottom: 1.2rem;
+}
+.servicio-icono-top.azul { background-color: #eff6ff; }
+.servicio-icono-top.verde { background-color: #ecfdf5; }
+.servicio-icono-top.naranja { background-color: #fff7ed; }
+
+.tarjeta-servicio h3 { margin: 0 0 0.7rem 0; color: #0f172a; font-size: 1.3rem; }
+.tarjeta-servicio p { color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0 0 1.5rem 0; flex-grow: 1; }
+.btn-servicio-link { text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+.text-azul { color: #2563eb; }
+.text-verde { color: #10b981; }
+.text-naranja { color: #f97316; }
+
+@media (max-width: 768px) {
+    .servicios-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .caracteristicas { flex-direction: column; }
+    .acciones { flex-direction: column; }
+  }
