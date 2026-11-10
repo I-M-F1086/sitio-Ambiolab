@@ -12,13 +12,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   background-image: url(/imagen-portada.webp);
+   background-image: url(/Fondoaguas.webp);
    background-size: cover;
    background-repeat: no-repeat;
     border-radius: 12px;
     box-shadow: 0 10px 15px -3px rgba(174, 123, 123, 0.5);
     margin-bottom: 1.5rem;
-   
 }
 .badge{
     background-color: #10b981;

@@ -5,6 +5,7 @@
     <div class="servicio-grid">
         <!--tarjeta azul-->
         <div class="tarjeta-servicio borde-azul">
+          <div class="servicio-info">
             <div class="servicio-icono-top azul"></div>
             <h3>MUESTREO Y ANÁLISIS DE AGUAS</h3>
             <h4> TOMA DE MUESTRAS EN SITIO</h4>
@@ -12,11 +13,22 @@
             <a routerLink="/contacto" class="btn-servicio-link texto-azul">
               Solicitar info
             </a>
-        </div>
-        <div class="tarjeta-servicio borde azul">
-          <h4>AGUA PARA USO Y CONSUMO HUMANO</h4>
+          
+        
+
+         
+         <div class="serv1" data-index="1">
+          <button class="element1" (click)="toggleAcordeon(1)">
+          <span>AGUA PARA USO Y CONSUMO HUMANO</span>
           <p>NOM-127-SSA1-2021</p>
-          <li>Especificaciones Sanitarias:</li>
+          <span class="icono-toggle">{{acordeonActivo() === 1 ? '-' : '+'}}</span>
+        </button>
+
+        @if (acordeonActivo() === 1) {
+        <div class="service-content abierto">
+          <p class="titulo-lista">Especificaciones Sanitarias:</p>
+        
+          <ul>
             <li>Físicas</li>
             <li>Químicas</li>
             <li>Metales y Metaloides</li>
@@ -31,13 +43,24 @@
             <li>Compuestos orgánicos halogenados adsorbibles fijos</li>
             <li>Compuestos orgánicos no halogenados</li>
             <li>Compuestos orgánicos halogenados absorbibles purgables</li>   
-        </div>
-        <div class="tarjeta-servicio borde azul">
-          <h4>AGUAS RESIDUALES</h4>
+          
+          </ul>
+          </div>
+        }
+      </div>
+           
+        <div class="serv1" data-index="2">
+          <button class="element1" (click)="toggleAcordeon(2)">
+          <span>AGUAS RESIDUALES</span>
           <p>NOM-001-SEMARNAT-2021</p>
           <p>NOM-002-SEMARNAT-1996</p>
           <p>NOM-003-SEMARNAT-1997</p>
           <li>NOM-001-SEMARNAT-2021</li>
+          <span class="icono-toggle">{{acordeonActivo() === 2 ? '-' : '+'}}</span>
+        </button>
+        @if (acordeonActivo() === 2) {
+        <div class="service-content abierto">
+          <ul>
           <li>
             Contaminantes en las descargas de aguas residuales en 
             cuerpos receptores propiedad de la nación.</li>
@@ -47,15 +70,61 @@
             <li>NOM-003-SEMARNAT-1997</li>
             <li> en las descargas de aguas residuales tratadas que
                se reúsen en servicios al público.</li>
-               
+              </ul> 
         </div>
+      }
+    </div>
+  </div>
+  <div class="servicio-imagen">
+    <img src="/aguasresiduales.webp">
+
+   </div>
+    </div>
+        
+
+      
          <!--Tarjeta Servicio borde verde-->
           <div class="tarjeta-servicio borde-verde">
+
+
+            <div class="servicio-imagen">
+              <img src="/portada3h.webp">
+            </div>
+            <div class="servicio-info">
             <div class="servicio-icono-top azul"></div>
-            <h3>RECIPIENTES SUJETOS A PRESIÓN</h3>
+            
+              <h3>ANÁLISIS DE SUELOS</h3>
+              <h4>NOM-021-RECNAT-2000</h4>
+              <p>ENSAYOS FÍSICOS, QUÍMICOS Y MICROBIOLÓGICOS</p>
+              <a routerLink="/contacto" class="btn-servicio-link texto-verde">Solicitar info</a>
+            
+
+            
+
+            <div class="serv1" data-index="3">
+            <button class="element1" (click)="toggleAcordeon(3)">
+              <span>ANÁLISIS DE SUELOS</span>
+              <h4>NOM-021-RECNAT-2000</h4>
+              <p>ENSAYOS FÍSICOS, QUÍMICOS Y MICROBIOLÓGICOS</p>
+              <span class="icono-toggle">{{acordeonActivo() === 3 ? '-' : '+'}}</span>
+            </button>
+            @if (acordeonActivo() === 3) {
+
+            }
+            
+          </div>
+
+            <div class="serv1" data-index="4">
+            <button class="element1" (click)="toggleAcordeon(4)"> 
+            <span>RECIPIENTES SUJETOS A PRESIÓN</span>
             <h4>NOM 020 STPS 2011</h4>
             <p>ENSAYOS NO DESTRUCTIVOS, ELABORACIÓN DE EXPEDIENTE,
                DICTAMEN DE VERIFICACIÓN, AUTORIZACIÓN STPS</p>
+               <span class="icono-toggle">{{acordeonActivo() === 4 ? '-' : '+'}}</span>
+            </button>
+            @if (acordeonActivo() === 4) {
+            <div class="service-content abierto">
+              <ul>
                <li>Realización de ensayos no destructivos</li>
                 <li>Inspección visual</li>
                 <li>Partículas Magnéticas</li>
@@ -69,14 +138,214 @@
                 <li>Registro electrónico ante la STPS</li>
                 <li>Ingreso de documentación para el trámite de Autorización STPS*</li>
                 <li>*Aplicable para algunos estados de la república</li>
-            <a routerLink="/nosotros" class="btn-servicio-link texto-verde">Solicitar info</a>
+        </ul>
+            </div>
+            }
+          </div>
         </div>
+          </div>
+
+
         <!--Tarjeta Servicio borde naranja-->
           <div class="tarjeta-servicio borde-naranja">
+            <div class="servicio-info">
             <div class="servicio-icono-top naranja"></div>
-            <h3>Diseño UI/IX</h3>
+            <h3>Analisis de Ambiente Laboral</h3>
             <p>Estructuramos interfaces modernas e intuitivas </p>
             <a routerLink="/contacto" class="btn-servicio-link texto-verde">Solicitar info</a>
+          
+
+          
+
+          <div class="serv1" data-index="5">
+            <button class="element1" (click)="toggleAcordeon(5)">
+              <span>NOM 011 STPS 2001
+                Ruido Laboral</span>
+              <p>Estructuramos interfaces modernas e intuitivas</p>
+              <span class="icono-toggle">{{acordeonActivo() === 5 ? '-' : '+'}}</span>
+            </button>
+
+            @if (acordeonActivo() === 5) {
+            <div class="service-content abierto">
+              <ul>
+            <li>NOM-011-STPS-2001:Condiciones de seguridad en los centros
+               de trabajo donde se genera ruido.</li>
+            <li>Objetivo: Establecer las condiciones de seguridad e higiene en los 
+              centros de trabajo donde se genere ruido que por sus características, 
+              niveles y tiempo de acción, sea capaz de alterar la salud de los
+               trabajadores; los niveles máximos y los tiempos máximos permisibles de
+                exposición por jornada de trabajo, su correlación y la implementación
+                 de un programa de conservación de la audición.</li>
+            <li>Campo de aplicación: Esta Norma rige en todo el territorio nacional y
+               aplica en todos los centros de trabajo en los que exista exposición del
+                trabajador a ruido.</li>
+              </ul>
           </div>
+          }
+          </div>
+
+          <div class="serv1" data-index="6">
+            <button class="element1" (click)="toggleAcordeon(6)">
+              <span>NOM 015 STPS 2001
+                Condiciones Térmicas Extremas</span>
+              <p>Estructuramos interfaces modernas e intuitivas</p>
+              <span class="icono-toggle">{{acordeonActivo() === 6 ? '-' : '+'}}</span>
+            </button>
+            @if (acordeonActivo() === 6) {
+            <div class="service-content abierto">
+              <ul>
+            <li>NOM-015-STPS-2001:Condiciones térmicas elevadas o abatidas</li>
+            <li>Objetivo:Establecer las condiciones de seguridad e higiene, los 
+              niveles y tiempos máximos permisibles de exposición a condiciones
+               térmicas extremas, que por sus características, tipo de actividades,
+                nivel, tiempo y frecuencia de exposición, sean capaces de alterar la 
+                salud de los trabajadores.</li>
+            <li>Campo de aplicación:Esta Norma aplica en todos los centros de trabajo
+               del territorio nacional en los que exista exposición de los trabajadores
+                a condiciones térmicas, provocadas por fuentes que generen que la 
+                temperatura corporal de los trabajadores sea inferior a 36°C o superior 
+                a 38°C.</li>
+           
+          </ul>
+          </div>
+          }
+          </div>
+          
+          <div class="serv1" data-index="7">
+            <button class="element1" (click)="toggleAcordeon(7)">
+              <span>NOM 022 STPS 2015
+                Electricidad estática</span>
+              <p>Estructuramos interfaces modernas e intuitivas</p>
+              <span class="icono-toggle">{{acordeonActivo() === 7 ? '-' : '+'}}</span>
+            </button>
+            @if (acordeonActivo() === 7) {
+            <div class="service-content abierto">
+              <ul>
+            <li>NOM-022-STPS-2015: Electricidad estática en los centros de trabajo</li>
+            <li>Objetivo: Establecer las condiciones de seguridad en los centros de
+               trabajo para prevenir los riesgos por electricidad estática, así 
+               como por descargas eléctricas atmosféricas.</li>
+            <li>Campo de aplicación:Esta Norma rige en todo el territorio nacional
+               y aplica en las áreas de los centros de trabajo donde se almacenen, 
+               manejen o transporten sustancias inflamables o explosivas, o en 
+               aquellas en que, por la naturaleza de sus procesos, materiales y
+                equipos, sean capaces de almacenar o generar cargas
+                 eléctricas estáticas.</li>
+              </ul>
+          </div>
+          }
+          </div>
+
+          <div class="serv1" data-index="8">
+              <button class="element1" (click)="toggleAcordeon(8)">
+              <span>NOM 025 STPS 2008
+                Condiciones de iluminación</span>
+              <p>Estructuramos interfaces modernas e intuitivas</p>
+              <span class="icono-toggle">{{acordeonActivo() === 8 ? '-' : '+'}}</span>
+            </button>
+            @if (acordeonActivo() === 8) {
+            <div class="service-content abierto">
+              <ul>
+            <li>NOM-025-STPS-2008: Condiciones de iluminación en los centros de trabajo</li>
+            <li>Objetivo: Establecer los requerimientos de iluminación en las áreas de los
+               centros de trabajo, para que se cuente con la cantidad de iluminación
+                requerida para cada actividad visual, a fin de proveer un ambiente 
+                seguro y saludable en la realización de las tareas que desarrollen
+                 los trabajadores.</li>
+            <li>Campo de aplicación: La presente Norma rige en todo el territorio 
+              nacional y aplica en todos los centros de trabajo.</li>
+              </ul>
+          </div>
+          }
+          </div>
+          
+        </div>
+        <div class="servicio-imagen">
+          <img src="/espectro.webp">
+          </div>
+          </div>
+            
+        <div class="tarjeta-servicio borde-azul">
+
+          <div class="servicio-imagen">
+            <img src="/hidroenagua.webp">
+  
+           </div>
+          <div class="servicio-info">
+            <div class="servicio-icono-top azul"></div>
+            <h3>ANÁLISIS DE FUENTES FIJAS</h3>
+            <h4>TOMA DE MUESTRAS EN SITIO</h4>
+            <p>NOM-230-SSA1-2002</p>
+            <a routerLink="/contacto" class="btn-servicio-link texto-azul">
+              Solicitar info
+            </a>
+          
+         <div class="serv1" data-index="9">
+          <button class="element1" (click)="toggleAcordeon(9)">
+          <span>NOM 081 SEMARNAT 1994
+            Ruido Perimetral</span>
+          <span class="icono-toggle">{{acordeonActivo() ===9 ? '-' : '+'}}</span>
+        </button>
+        @if (acordeonActivo() === 9) {
+        <div class="service-content abierto">
+          <ul>
+            <li>NOM-081-STPS-1994:Límites máximos permisibles de emisión 
+              de ruido de las fuentes fijas</li>
+              <li>Objetivo: Esta norma oficial mexicana establece los límites
+                 máximos permisibles de emisión de ruido que genera el
+                  funcionamiento de las fuentes fijas y el método de medición
+                   por el cual se determina su nivel emitido hacia el ambiente.</li>
+              <li>Campo de aplicación: Esta norma oficial mexicana se aplica en la
+                 pequeña, mediana y gran industria, comercios establecidos, 
+               servicios públicos o privados y actividades en la vía pública.</li> 
+          </ul> 
+              </div>
+        }
+            </div>
+      </div>
     </div>
+
+      <div class="tarjeta-servicio borde-azul">
+        <div class="servicio-info">
+          <div class="servicio-icono-top azul"></div>
+          <h3>Análisis de Calidad del Aire</h3>
+          <h4></h4>
+          <p>N</p>
+          <a routerLink="/contacto" class="btn-servicio-link texto-azul">
+            Solicitar info
+          </a>
+      
+
+       
+
+       <div class="serv1" data-index="10">
+        <button class="element1" (click)="toggleAcordeon(10)">
+        <span>NOM 081 SEMARNAT 1994
+          Ruido Perimetral</span>
+        <span class="icono-toggle">{{acordeonActivo() ===10 ? '-' : '+'}}</span>
+      </button>
+      @if (acordeonActivo() === 10) {
+      <div class="service-content abierto">
+        <ul>
+          <li> Determinación de CO en aire ambiente (NOM-034-SEMARNAT-2011) </li>
+            <li>- Determinación de Ozono en aire ambiente (NOM-036-SEMARNAT-1993)</li>
+            <li>- Determinación de NO, NO2, NOx en aire ambiente (NOM-037-SEMARNAT-1993)</li> 
+            <li>- Determinación de SO2 en aire ambiente (NOM-038-SEMARNAT-1993)</li>
+            <li>- Muestreo de PM 10 perimetrales bajo el método CFR 40 parte 50, apéndice J
+               mediante Métodos Automáticos Equivalentes</li>
+            <li> - Muestreo de PM 2.5 perimetrales bajo el método CFR 40 parte
+               50, apéndice L mediante Métodos Automáticos Equivalentes</li>
+          <li>-Condiciones Meteorológicas</li>
+        </ul> 
+            </div>      
+          }
+       </div>
+     </div>
+     <div class="servicio-imagen">
+      <img src="/portada3h.webp">
+
+     </div>
+     </div>
+    </div>
+  
 </section>

@@ -1,43 +1,196 @@
-/* --- SERVICIOS GRID --- */
-.servicios-seccion { margin-top: 5rem; margin-bottom: 4rem; }
-.servicios-seccion h2 { font-size: 2.2rem; color: #0f172a; margin-bottom: 0.5rem; }
-.servicios-subtitulo { color: #64748b; font-size: 1.1rem; margin-bottom: 3rem; }
-.servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+/* ==========================================================================
+   1. SECCIÓN Y CONTENEDOR GRID PRINCIPAL (3 Columnas)
+   ========================================================================== */
+.servicios-seccion { 
+  margin-top: 5rem; 
+  margin-bottom: 4rem; 
+  text-align: center; /* Centra los títulos principales */
+}
 
+.servicios-seccion h2 { 
+  font-size: 2.2rem; 
+  color: #0f172a; 
+  margin-bottom: 0.5rem; 
+}
+
+.servicio-subtitulos { /* Corregido para que coincida con tu HTML */
+  color: #64748b; 
+  font-size: 1.1rem; 
+  margin-bottom: 3rem; 
+}
+
+.servicio-grid {
+  /*
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  3 Tarjetas principales en paralelo */
+  gap: 24px;
+  padding: 20px;
+}
+
+/* ==========================================================================
+   ESTRUCTURA DE LAS TARJETAS (2 Columnas internas: Info + Imagen)
+   ========================================================================== */
 .tarjeta-servicio {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Divide la tarjeta internamente */
   background-color: white;
-  padding: 2.5rem 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 6px solid #ccc; /* Grosor unificado */
+  overflow: hidden;
+}
+
+.tarjeta-servicio:hover { 
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); 
+}
+
+/* Colores de bordes superiores */
+.borde-azul { border-top-color: #007bff; }
+.borde-verde { border-top-color: #28a745; }
+.borde-naranja { border-top-color: #fd7e14; }
+
+.servicio-info {
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 5px solid transparent;
+  justify-content: flex-start; /* Alinea el contenido arriba */
 }
-.tarjeta-servicio:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-.tarjeta-servicio.borde-azul { border-top-color: #2563eb; }
-.tarjeta-servicio.borde-verde { border-top-color: #10b981; }
-.tarjeta-servicio.borde-naranja { border-top-color: #f97316; }
 
+/* ==========================================================================
+   ELEMENTOS INTERNOS DE LA TARJETA (Títulos, Enlaces, Iconos)
+   ========================================================================== */
 .servicio-icono-top {
-  font-size: 1.5rem; width: 45px; height: 45px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 8px; margin-bottom: 1.2rem;
+  font-size: 1.5rem; 
+  width: 45px; 
+  height: 45px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  border-radius: 8px; 
+  margin-bottom: 1.2rem;
 }
 .servicio-icono-top.azul { background-color: #eff6ff; }
 .servicio-icono-top.verde { background-color: #ecfdf5; }
 .servicio-icono-top.naranja { background-color: #fff7ed; }
 
 .tarjeta-servicio h3 { margin: 0 0 0.7rem 0; color: #0f172a; font-size: 1.3rem; }
-.tarjeta-servicio p { color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0 0 1.5rem 0; flex-grow: 1; }
-.btn-servicio-link { text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-.text-azul { color: #2563eb; }
-.text-verde { color: #10b981; }
-.text-naranja { color: #f97316; }
+.tarjeta-servicio h4 { margin: 0 0 0.5rem 0; color: #475569; font-size: 1rem; font-weight: 600; }
+.tarjeta-servicio p { color: #475569; font-size: 0.95rem; line-height: 1.6; margin: 0 0 1.5rem 0; }
+
+.btn-servicio-link { 
+  text-decoration: none; 
+  font-weight: 600; 
+  font-size: 0.95rem; 
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+/* Corregidos para enlazar con las clases de tu HTML (texto- en vez de text-) */
+.texto-azul { color: #2563eb; }
+.texto-verde { color: #10b981; }
+.texto-naranja { color: #f97316; }
+
+/* Contenedor de Imagen derecha */
+.servicio-imagen {
+  width: 100%;
+  height: 100%;
+}
+.servicio-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+  CONTROL DE LOS ACORDEONES (Botones + Listas)
+   ========================================================================== */
+.serv1 {
+  margin-top: 1rem; /* Reducido de 5rem porque separaba demasiado los acordeones */
+  border-bottom: 1px solid #e2e8f0; /* Línea sutil divisoria inferior */
+}
+
+.element1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.element1 span:first-child {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+
+.element1 p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.icono-toggle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #64748b;
+}
+
+/* Contenido dinámico renderizado por Angular @if */
+.service-content.abierto {
+  padding: 0 0 16px 0;
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.service-content ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.service-content li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   5. RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .servicio-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Columnas en pantallas medianas */
+  }
+}
 
 @media (max-width: 768px) {
-    .servicios-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-    .caracteristicas { flex-direction: column; }
-    .acciones { flex-direction: column; }
+  .servicio-grid { 
+    grid-template-columns: 1fr; /* 1 Columna en tablets y teléfonos */
+    gap: 1.5rem; 
   }
+}
+
+@media (max-width: 600px) {
+  .tarjeta-servicio {
+    grid-template-columns: 1fr; /* La imagen pasa abajo en teléfonos */
+  }
+  .servicio-imagen {
+    height: 200px;
+  }
+}
+
+
+
+
+
