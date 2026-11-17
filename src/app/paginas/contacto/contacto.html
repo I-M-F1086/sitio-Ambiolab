@@ -1,6 +1,9 @@
-<div class="contacto-box">
-    <h2>Contacto</h2>
-    <p>Envianos un mensaje y te responderemos pronto</p>
+<section class="contacto">
+  
+<div class="grid-contacto">
+        <div class="contacto-box">
+            <h2 style="color:rgb(44, 230, 72)">Contacto</h2>
+            <p>Envianos un mensaje y te responderemos pronto</p>
 
     <!--(submit) reemplaza al addEventListener('submit') de JS -->
     <form (ngSubmit)="enviarFormulario($event)">
@@ -8,12 +11,34 @@
     <input type="text" placeholder="" name="nombre"
     [(ngModel)]="nombreUsuario"
     required>
+    <input type="email" placeholder="ingresa un correo electrónico" name="correo"
+    [(ngModel)]="correoElectronico" required>
+    <textarea placeholder="Escribe tu mensaje" name="mensaje"
+    [(ngModel)]="mensajeUsuario" required></textarea> 
     <button type="submit">enviar mensaje </button>    
     </form>
 
 </div>
+<div class="contacto-info">
+    <h1 style="color: rgb(255, 145, 35);">Contáctanos</h1>
+    <p>Si tienes alguna pregunta, comentario o sugerencia, no dudes en ponerte en contacto con nosotros. 
+        Estamos aquí para ayudarte y responder a tus inquietudes. 
+        Puedes enviarnos un mensaje a través del formulario de contacto o utilizar los siguientes medios de comunicación:</p>
+    <ul>
+        <li><strong>Visitanos</strong> Gabino Vazquez 1 Primer piso, San Pedro Totoltepec, 
+            50226, Toluca, Estado de México.</li>
+        <li><strong>Teléfono:</strong> 722 938 2338</li>
+        <li><strong>Correo electrónico:</strong> contacto@ambiolab.mx
 
+        </li>
+        <li><strong>Quejas y Sugerencias:</strong> quejasysugerencias@ambiolab.mx
 
+        </li>
+    </ul>
+</div>
+
+</div>
+</section>
 
 
 

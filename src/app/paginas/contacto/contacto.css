@@ -1,3 +1,23 @@
+.contacto{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgb(0 0 0 / 40%)), url("/muestreo55.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding: 4rem 0;
+}
+
+.grid-contacto{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+    margin: 0 auto;
+    padding: 2rem;
+    align-items: center;
+    max-width: 1200px;
+    
+}
+
 .contacto-box{
     background-color: white;
     padding: 2.5rem ;
@@ -26,7 +46,7 @@ label{
     color: #334155;
     margin-bottom: -0.5rem;
 }
-input{
+input, textarea{
     padding: 0.8rem 1rem;
     border: 2px solid #e2e8f0;
     border-radius: 8px;

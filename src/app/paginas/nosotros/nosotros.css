@@ -1,3 +1,30 @@
+.grid-nosotros{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 2rem;
+   align-items: center;
+   padding: 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.imagen-nosotros img{
+    width: 100%;
+    border-radius: 12px;
+   
+    height: auto;
+    display: block;
+}
+@media (max-width: 768px){
+    .grid-nosotros{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
 .nosotros-box{
     background-color: white;
     padding:2.5rem;
@@ -9,7 +36,7 @@
 
 .nosotros-box h2{
     margin-top: 0;
-    color: #0f172a;
+    color: #25933e;
     font-size: 2rem ;
 }
 subtitulo{

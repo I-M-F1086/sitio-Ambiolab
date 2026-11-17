@@ -7,12 +7,12 @@
 /*  ESTILOS HERO*/
 
 .hero-section{
-    height: 650px;
+    height: 750px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   background-image: url(/Fondoaguas.webp);
+   background-image:linear-gradient(rgb(0 0 0 /20%), rgb(0 0 0 / 30%)), url(/Fondoaguas.webp);
    background-size: cover;
    background-repeat: no-repeat;
     border-radius: 12px;
@@ -31,18 +31,19 @@
 }
 .hero-section h1{
     font: size 2.8rem;
-    color:#0f172a;
+    color:#edeff2;
     margin: 1.5rem 0 1rem 0;
     line-height: 1.2;
 }
 .texto-azul{color:#2563eb;}
 
 .descripcion{
-    color: #64748b;
+    color: #d7dee7;
     font-size: 1.2rem;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto 2.5rem auto;
     line-height: 1.6;
+    text-align: center;
 }
 .acciones{
     display: flex;
@@ -80,16 +81,18 @@
 /*caracteristicas*/
 .caracteristicas{
     display: flex;
-    gap: 2rem;
-    margin-bottom: 4rem;
+    margin: 5rem;
 }
-.bloque-feature{
-    background-color: white;
+.bloque-features{
+    background-color: rgb(197, 212, 242);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.5);
     flex: 1;
-    text-align: left;    
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto;  
+
 }
 .icono{
     font-size: 2rem;
@@ -104,8 +107,8 @@
 .icono.verde { background-color: #ecfdf5; }
 .icono.azul { background-color: #eff6ff; }
 
-.bloque-feature h3 { margin: 0 0 0.5rem 0; color: #0f172a; }
-.bloque-feature p { margin: 0; color: #64748b; line-height: 1.5; }
+.bloque-features h3 { margin: 0 0 0.5rem 0; color: #0f172a; }
+.bloque-features p { margin: 0; color: #64748b; line-height: 1.5; }
 
 
 .final-page{

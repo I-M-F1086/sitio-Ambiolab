@@ -8,19 +8,19 @@
           <div class="servicio-info">
             <div class="servicio-icono-top azul"></div>
             <h3>MUESTREO Y ANÁLISIS DE AGUAS</h3>
-            <h4> TOMA DE MUESTRAS EN SITIO</h4>
-            <p>NOM-230-SSA1-2002</p>
-            <a routerLink="/contacto" class="btn-servicio-link texto-azul">
-              Solicitar info
-            </a>
+           
+            <div class="serv1" data-index="0">
+             
+              <h3> TOMA DE MUESTRAS EN SITIO:</h3>
+              <h4>NOM-230-SSA1-2002</h4>
+             </div>
           
-        
-
-         
          <div class="serv1" data-index="1">
+          <h3>AGUA PARA USO Y CONSUMO HUMANO</h3>
+          <h4>NOM-127-SSA1-2021</h4>
           <button class="element1" (click)="toggleAcordeon(1)">
-          <span>AGUA PARA USO Y CONSUMO HUMANO</span>
-          <p>NOM-127-SSA1-2021</p>
+          <span>Mas informacion</span>
+          
           <span class="icono-toggle">{{acordeonActivo() === 1 ? '-' : '+'}}</span>
         </button>
 
@@ -50,12 +50,14 @@
       </div>
            
         <div class="serv1" data-index="2">
+          <h3>AGUAS RESIDUALES</h3>
+          <h4>NOM-001-SEMARNAT-2021, 
+              NOM-002-SEMARNAT-1996,
+              NOM-003-SEMARNAT-1997, 
+              NOM-001-SEMARNAT-2021</h4>
           <button class="element1" (click)="toggleAcordeon(2)">
-          <span>AGUAS RESIDUALES</span>
-          <p>NOM-001-SEMARNAT-2021</p>
-          <p>NOM-002-SEMARNAT-1996</p>
-          <p>NOM-003-SEMARNAT-1997</p>
-          <li>NOM-001-SEMARNAT-2021</li>
+          <span>Mas informacion</span>
+       
           <span class="icono-toggle">{{acordeonActivo() === 2 ? '-' : '+'}}</span>
         </button>
         @if (acordeonActivo() === 2) {
@@ -74,11 +76,16 @@
         </div>
       }
     </div>
+
+    
   </div>
   <div class="servicio-imagen">
-    <img src="/aguasresiduales.webp">
+    <img src="/hidroenagua.webp">
 
    </div>
+   <a routerLink="/contacto" class="btn-servicio-link texto-azul">
+    Solicitar info
+  </a>
     </div>
         
 
@@ -93,36 +100,11 @@
             <div class="servicio-info">
             <div class="servicio-icono-top azul"></div>
             
-              <h3>ANÁLISIS DE SUELOS</h3>
-              <h4>NOM-021-RECNAT-2000</h4>
-              <p>ENSAYOS FÍSICOS, QUÍMICOS Y MICROBIOLÓGICOS</p>
-              <a routerLink="/contacto" class="btn-servicio-link texto-verde">Solicitar info</a>
-            
+              <h3>RECIPIENTES SUJETOS A PRESIÓN</h3>
 
-            
-
+              <h4> ENSAYOS FÍSICOS, QUÍMICOS Y MICROBIOLÓGICOS<br>NOM-021-RECNAT-2000</h4>
+             
             <div class="serv1" data-index="3">
-            <button class="element1" (click)="toggleAcordeon(3)">
-              <span>ANÁLISIS DE SUELOS</span>
-              <h4>NOM-021-RECNAT-2000</h4>
-              <p>ENSAYOS FÍSICOS, QUÍMICOS Y MICROBIOLÓGICOS</p>
-              <span class="icono-toggle">{{acordeonActivo() === 3 ? '-' : '+'}}</span>
-            </button>
-            @if (acordeonActivo() === 3) {
-
-            }
-            
-          </div>
-
-            <div class="serv1" data-index="4">
-            <button class="element1" (click)="toggleAcordeon(4)"> 
-            <span>RECIPIENTES SUJETOS A PRESIÓN</span>
-            <h4>NOM 020 STPS 2011</h4>
-            <p>ENSAYOS NO DESTRUCTIVOS, ELABORACIÓN DE EXPEDIENTE,
-               DICTAMEN DE VERIFICACIÓN, AUTORIZACIÓN STPS</p>
-               <span class="icono-toggle">{{acordeonActivo() === 4 ? '-' : '+'}}</span>
-            </button>
-            @if (acordeonActivo() === 4) {
             <div class="service-content abierto">
               <ul>
                <li>Realización de ensayos no destructivos</li>
@@ -130,9 +112,7 @@
                 <li>Partículas Magnéticas</li>
                 <li>Medición de espesores por Ultrasonido</li>
                 <li>Elaboración de expediente:</li>
-                <li>Planos</li>
-                <li>Pruebas</li>
-                <li>Memorias</li>
+                <li>Planos, Pruebas, Memorias</li>
                 <li>Tramite con unidad de verificación Acreditada y Aprobada</li>
                 <li>Expedición de Dictamen y aviso</li>
                 <li>Registro electrónico ante la STPS</li>
@@ -140,8 +120,9 @@
                 <li>*Aplicable para algunos estados de la república</li>
         </ul>
             </div>
-            }
+            <a routerLink="/contacto" class="btn-servicio-link texto-verde">Solicitar info</a>
           </div>
+          
         </div>
           </div>
 
@@ -151,17 +132,13 @@
             <div class="servicio-info">
             <div class="servicio-icono-top naranja"></div>
             <h3>Analisis de Ambiente Laboral</h3>
-            <p>Estructuramos interfaces modernas e intuitivas </p>
-            <a routerLink="/contacto" class="btn-servicio-link texto-verde">Solicitar info</a>
-          
-
-          
-
+            
+           
           <div class="serv1" data-index="5">
             <button class="element1" (click)="toggleAcordeon(5)">
               <span>NOM 011 STPS 2001
                 Ruido Laboral</span>
-              <p>Estructuramos interfaces modernas e intuitivas</p>
+              
               <span class="icono-toggle">{{acordeonActivo() === 5 ? '-' : '+'}}</span>
             </button>
 
@@ -188,7 +165,7 @@
             <button class="element1" (click)="toggleAcordeon(6)">
               <span>NOM 015 STPS 2001
                 Condiciones Térmicas Extremas</span>
-              <p>Estructuramos interfaces modernas e intuitivas</p>
+              
               <span class="icono-toggle">{{acordeonActivo() === 6 ? '-' : '+'}}</span>
             </button>
             @if (acordeonActivo() === 6) {
@@ -215,7 +192,7 @@
             <button class="element1" (click)="toggleAcordeon(7)">
               <span>NOM 022 STPS 2015
                 Electricidad estática</span>
-              <p>Estructuramos interfaces modernas e intuitivas</p>
+             
               <span class="icono-toggle">{{acordeonActivo() === 7 ? '-' : '+'}}</span>
             </button>
             @if (acordeonActivo() === 7) {
@@ -240,7 +217,7 @@
               <button class="element1" (click)="toggleAcordeon(8)">
               <span>NOM 025 STPS 2008
                 Condiciones de iluminación</span>
-              <p>Estructuramos interfaces modernas e intuitivas</p>
+              
               <span class="icono-toggle">{{acordeonActivo() === 8 ? '-' : '+'}}</span>
             </button>
             @if (acordeonActivo() === 8) {
@@ -258,6 +235,8 @@
           </div>
           }
           </div>
+          <br>
+          <a routerLink="/contacto" class="btn-servicio-link texto-verde">Solicitar info</a>
           
         </div>
         <div class="servicio-imagen">
@@ -268,25 +247,20 @@
         <div class="tarjeta-servicio borde-azul">
 
           <div class="servicio-imagen">
-            <img src="/hidroenagua.webp">
+            <img src="/portada-suelo.webp">
   
            </div>
           <div class="servicio-info">
             <div class="servicio-icono-top azul"></div>
             <h3>ANÁLISIS DE FUENTES FIJAS</h3>
-            <h4>TOMA DE MUESTRAS EN SITIO</h4>
-            <p>NOM-230-SSA1-2002</p>
-            <a routerLink="/contacto" class="btn-servicio-link texto-azul">
-              Solicitar info
-            </a>
+            <h4>NOM 081 SEMARNAT 1994</h4>
+           
+           
           
          <div class="serv1" data-index="9">
-          <button class="element1" (click)="toggleAcordeon(9)">
-          <span>NOM 081 SEMARNAT 1994
-            Ruido Perimetral</span>
-          <span class="icono-toggle">{{acordeonActivo() ===9 ? '-' : '+'}}</span>
-        </button>
-        @if (acordeonActivo() === 9) {
+      
+          <span class="icono-toggle"> Ruido Perimetral</span>
+
         <div class="service-content abierto">
           <ul>
             <li>NOM-081-STPS-1994:Límites máximos permisibles de emisión 
@@ -300,7 +274,9 @@
                servicios públicos o privados y actividades en la vía pública.</li> 
           </ul> 
               </div>
-        }
+              <a routerLink="/contacto" class="btn-servicio-link texto-azul">
+                Solicitar info
+              </a>
             </div>
       </div>
     </div>
@@ -309,22 +285,8 @@
         <div class="servicio-info">
           <div class="servicio-icono-top azul"></div>
           <h3>Análisis de Calidad del Aire</h3>
-          <h4></h4>
-          <p>N</p>
-          <a routerLink="/contacto" class="btn-servicio-link texto-azul">
-            Solicitar info
-          </a>
-      
-
-       
-
+          
        <div class="serv1" data-index="10">
-        <button class="element1" (click)="toggleAcordeon(10)">
-        <span>NOM 081 SEMARNAT 1994
-          Ruido Perimetral</span>
-        <span class="icono-toggle">{{acordeonActivo() ===10 ? '-' : '+'}}</span>
-      </button>
-      @if (acordeonActivo() === 10) {
       <div class="service-content abierto">
         <ul>
           <li> Determinación de CO en aire ambiente (NOM-034-SEMARNAT-2011) </li>
@@ -337,9 +299,12 @@
                50, apéndice L mediante Métodos Automáticos Equivalentes</li>
           <li>-Condiciones Meteorológicas</li>
         </ul> 
-            </div>      
-          }
+            </div>
+            <a routerLink="/contacto" class="btn-servicio-link texto-azul">
+              Solicitar info
+            </a>      
        </div>
+     
      </div>
      <div class="servicio-imagen">
       <img src="/portada3h.webp">

@@ -12,10 +12,13 @@ import { FormsModule } from '@angular/forms';
 export class Contacto {
   //Creamos la variable para almacanar el texto
 nombreUsuario: string = '';
+correoElectronico: string = '';
+mensajeUsuario: string = '';
 
  enviarFormulario(evento: Event){
   evento.preventDefault();
-  //Agora podemos usar el valor de la variable directamente 
-  console.log('Formulario enviado por:', this.nombreUsuario)
+  //Ahora podemos usar el valor de la variable directamente 
+  console.log('Formulario enviado por:', this.nombreUsuario + ',correo: ' +
+     this.correoElectronico +' mensaje: ' + this.mensajeUsuario);
  }
 }
