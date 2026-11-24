@@ -45,7 +45,6 @@ body{
     display: flex;
     padding: 1.2rem 2rem;
     gap: 25px;
-    
 }
 .menu-navegacion a{
     color: #1b5ea1;
@@ -54,10 +53,7 @@ body{
     font-size: 1.2rem;
     transition: all 0.3s ease;
     border-bottom:2px solid transparent ;
-
 }
-
-
 /*efecto al pasar el mouse encima*/
 .menu-navegacion a:hover,.activo{
     color: #f97316;
